@@ -1,0 +1,147 @@
+<!-- Register/login page, only the login feature works right now -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>ECHO Register/Login</title>
+
+<meta charset="utf-8">
+<script type="text/javascript" src="jquery-3.5.1.js"> </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Including navbar code-->
+<link href="navBar.css" rel="stylesheet">
+<style>
+	body {
+		background-color: #7A9BCF;
+	}
+
+	h1 {
+		font-size: 35px;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+	}
+
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		justify-items: center;
+		align-items: left;
+		background-color: #7A9BCF;
+		padding: 10px;
+	}
+
+	.grid-container2 {
+		display: grid;
+		grid-template-columns: auto;
+		justify-items: left;
+		align-items: left;
+		background-color: white;
+		padding: 40px;
+	}
+
+	.grid-item1 {
+		background-color: white;
+		text-align: left;
+	}
+
+	.grid-item2 {
+		background-color: ligthblue;
+		text-align: left;
+		padding: 40px;
+	}
+</style>
+</head>
+
+<body>
+	<!-- Navbar links -->
+	<ul>
+		<li><a href="aboutPage.html">About us</a></li>
+		<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+		</a>
+			<div class="dropdown-content">
+				<a href="accountPage.html">Account</a> 
+				<a href="registerLoginPage.html">Register/Login</a> 
+				<a href="progressPage.html">Progress</a>
+			</div>
+		</li>
+		<li> <a href="landingPage.html">Home</a></li>
+		<li style="float: left"><a class="active" href="landingPage.html">ECHO</a></li>
+	</ul>
+
+	<!-- Register and login forms -->
+	<div class="grid-container">
+		<div class="grid-item2">
+			<br><br><br>
+			<div class="grid-container2">
+				<h1>Register</h1>
+				<form method="post">
+					<label for="Username"><h2>Username</h2></label> 
+					<input type="text" size="30" maxlength="30" name="Username" placeholder="Username" required /> 
+					<label for="uname"><h2>Name</h2></label> 
+					<input type="text" size="30" maxlength="30" name="name" placeholder="Name" /> 
+					<label for="psw"><h2>Password</h2></label> 
+					<input type="password" size="30" minlength="8" id="psw" name="psw" placeholder="Password" required />
+					<label for="conpsw"><h2>Confirm password</h2></label> 
+					<input type="password" size="30" minlength="8" id="conpsw" name="conpsw" placeholder="Confirm password" required /> 
+					<br> <br> 
+					<input type="button" value="Register">
+				</form>
+			</div>
+		</div>
+		<div class="grid-item2">
+			<br><br><br>
+			<img src="octopus2.png" alt="Purple octopus"
+				style="width: 400px; height: 400px;">
+		</div>
+		<div class="grid-item2">
+			<br><br><br>
+			<div class="grid-container2">
+				<h1>Login</h1>
+				<form method="post">
+					<label for="Username"><h2>Username</h2></label> 
+					<input type="text" size="30" maxlength="30" name="Username" id="loginID" placeholder="Username" required />
+					<label for="psw"><h2>Password</h2></label> 
+					<input type="password" size="30" minlength="8" name="psw" id="loginPassword" placeholder="Password" required />
+					<br><br> 
+					<input type="button" value="Login" onclick="post()"/>
+				</form> <br>
+				<div id="result"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- div id="result"></div -->
+	<script type="text/javascript"> 
+		function post(){
+			var loginID = $('#loginID').val();
+			var loginPassword = $('#loginPassword').val();
+			$.post('login.php', {postloginID:loginID,postloginPassword:loginPassword}, //loginID and loginPassword are the variables defined
+			function(data) //variable "data" contains the data sent from server script "login.php" 
+			{				
+				var dataStr = new String(data);
+				if (dataStr == "Success") {					
+					location.href="gamePage.php";
+				} else {			
+					$('#result').html(data);
+				}
+			});
+		}
+	
+	
+	</script>
+</body>
+</html>

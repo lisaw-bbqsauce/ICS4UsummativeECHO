@@ -1,0 +1,151 @@
+<!-- About page, how to play and about ECHO -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>ECHO Home</title>
+
+<!-- Library for the dropdown arrow -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<!-- Including navbar code -->
+<link href="navBar.css" rel="stylesheet">
+<style>
+	body {
+		background-color: white;
+	}
+
+	h1 {
+		font-size: 45px;
+		font-family: "Segoe UI", sans-serif;
+		font-weight: regular;
+		color: black;
+		text-align: left;
+		margin: 0px 20px;
+	}
+
+	h2 {
+		font-size: 55px;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+	}
+
+	p {
+		font-size: 22px;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+		margin: 0px 25px;
+	}
+	
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto auto auto auto;
+		background-color: white;
+		padding: 10px 0px;
+	}
+
+	.grid-item {
+		background-color: white;
+		padding: 10px 10px;
+		text-align: left;
+		/*border: 1px solid black;*/
+	}
+	
+	.grid-item2 {
+		background-color: white;
+		padding: 10px 100px;
+		margin: 
+		text-align: left;
+	}
+	
+</style>
+</head>
+
+<body>
+	<!-- Navbar links -->
+	<ul>
+		<li><a href="aboutPage.html">About us</a></li>
+		<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+		</a>
+			<div class="dropdown-content">
+				<a href="accountPage.html">Account</a> 
+				<a href="registerLoginPage.html">Register/Login</a> 
+				<a href="progressPage.html">Progress</a>
+			</div>
+		</li>
+		<li> <a href="landingPage.html">Home</a></li>
+		<li style="float: left"><a class="active" href="landingPage.html">ECHO</a></li>
+	</ul>
+	
+	<div class="grid-container">
+		<div class="grid-item">
+			<br><br><br><br>
+			<h1>How to play</h1>
+		</div>
+		<!-- The empty grid-items are place holders because there are two columns -->
+		<div class="grid-item">
+		</div>
+		<div class="grid-item">
+			<p>To start the game, click the "New Word" button. <br>
+			Looking at the game page below, there are two lines of text, the blue one <br>
+			is the definition and the purple one is the first two letters of the word. Read <br>
+			the definition and complete the word by pressing the buttons of the keyboard <br>
+			on the screen. <br><br>
+			</p>
+		</div>
+		<div class="grid-item">
+		</div>
+		<div class="grid-item2">
+			<img src="how_to.png" alt="Game page"
+				style="width: 511px; height: 276px;">
+		</div>
+		<div class="grid-item">
+		</div>
+		<div class="grid-item">
+			<p>When you get the word right, a message will pop up, displaying your score and <br>
+			the high score of the previous guest. <br>
+			To get your next word, click "New Word" again.
+			</p>
+		</div>
+		<div class="grid-item">
+		</div>
+		<div class="grid-item">
+			<h1>What ECHO stands for</h1>
+		</div>
+		<div class="grid-item">
+		</div>
+		<div class="grid-item">
+			<p>ECHO stands for Educational Cognitive Healing Octopus. Our mascot <br>
+			is a purple octopus named Harry, who can be seen throughout the website. <br>
+			We hope to help students, or anyone, who struggle with spelling in a fun way.
+			</p>
+		</div>
+		<div class="grid-item2">
+			<img src="octopus2.png" alt="Purple octopus"
+				style="width: 150px; height: 150px;">
+		</div>
+		<div class="grid-item">
+			<h1>Our goals</h1>
+		</div>
+		<div class="grid-item">
+		</div>
+		<div class="grid-item">
+			<p>Here at ECHO we strive to help students with spelling and memorization. <br>
+			ECHO is directed towards young adults or older children as the vocabulary <br>
+			may be hard for younger children. <br><br>
+			The colours of ECHO are blue and purple. Blue represents calmness and <br>
+			comfort, perfect for a learning environment. Purple represents wisdom <br>
+			and transformation, fitting for the educational aspect of the game.
+			</p>
+		</div>
+		<div class="grid-item">
+		</div>
+	</div>
+</body>
+</html>

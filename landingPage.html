@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>ECHO Home</title>
+<!-- Library for the dropdown arrow -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Including navbar code-->
+<link href="navBar.css" rel="stylesheet">
+
+<style>
+	body {
+		background-color: #7A9BCF;
+	}
+
+	h1 {
+		font-size: 65px;
+		font-family: Candara, sans-serif;
+		color: white;
+		text-align: center;
+		text-shadow: 2px 2px 0px black;
+	}
+
+	h2 {
+		font-size: 35px;
+		font-family: "Segoe UI", sans-serif;
+		color: white;
+		text-align: center;
+		text-shadow: 2px 2px 0px black;
+	}
+
+	.button {
+		top: 50%;
+		border: none;
+		color: white;
+		padding: 25px 50px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		margin: 4px 2px;
+		transition-duration: 0.2s;
+		cursor: pointer;
+	}
+
+	.button1 {
+		margin: 0 auto;
+		display: block;
+		background-color: white;
+		color: purple;
+		border: 1px solid black;
+	}
+
+	.button1:hover {
+		background-color: purple;
+		color: white;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+		background-color: #7A9BCF;
+		padding: 10px;
+	}
+
+	.grid-item {
+		background-color: #7A9BCF;
+		padding: 10px;
+		text-align: center;
+	}
+</style>
+</head>
+
+<body>
+	<!-- Navbar links -->
+	<ul>
+		<li><a href="aboutPage.html">About us</a></li>
+		<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+		</a>
+			<div class="dropdown-content">
+				<a href="accountPage.html">Account</a> 
+				<a href="registerLoginPage.html">Register/Login</a> 
+				<a href="progressPage.html">Progress</a>
+			</div>
+		</li>
+		<li> <a href="landingPage.html">Home</a></li>
+		<li style="float: left"><a class="active" href="landingPage.html">ECHO</a></li>
+	</ul>
+	
+	<div class="grid-container">
+		<br><br>
+		<div class="grid-item">
+			<h1>Welcome to ECHO</h1>
+		</div>
+		<div class="grid-item">
+			<img src="octopus2.png" alt="Purple octopus"
+				style="width: 350px; height: 350px;">
+		</div>
+		<div class="grid-item">
+			<button type="button" class="button button1"
+				onclick="location.href='gamePage.php'">
+				<b>PLAY</b>
+			</button>
+		</div>
+		<div class="grid-item">
+			<h2>Click to start your first lesson</h2>
+		</div>
+	</div>
+</body>
+</html>
