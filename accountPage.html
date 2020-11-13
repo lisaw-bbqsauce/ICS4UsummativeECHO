@@ -1,0 +1,104 @@
+<!-- Account page, doesn't do anything yet -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>ECHO Account</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Including navbar code-->
+<link href="navBar.css" rel="stylesheet">
+<style>
+	body {
+		background-color: #7A9BCF;
+	}
+
+	h1 {
+		font-size: 35px;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+	}
+
+	h2 {
+		font-size: 20px;
+		font-family: "Segoe UI", sans-serif;
+		color: black;
+		text-align: left;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-items: center;
+		align-items: center;
+		background-color: #7A9BCF;
+		padding: 10px;
+		border: 1px solid black;
+	}
+
+	.grid-container2 {
+		display: grid;
+		grid-template-columns: 500px;
+		justify-items: left;
+		align-items: left;
+		background-color: white;
+		padding: 40px;
+		border: 1px solid black;
+	}
+
+	.grid-item1 {
+		background-color: white;
+		text-align: left;
+		justify-items: center;
+		align-items: center;
+		padding: 0px 20px;
+		border: 1px solid black;
+	}
+
+	.grid-item2 {
+		background-color: ligthblue;
+		text-align: left;
+	}
+</style>
+</head>
+
+<body>
+	<!-- Navbar links -->
+	<ul>
+		<li><a href="aboutPage.html">About us</a></li>
+		<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+		</a>
+			<div class="dropdown-content">
+				<a href="accountPage.html">Account</a> 
+				<a href="registerLoginPage.html">Register/Login</a> 
+				<a href="progressPage.html">Progress</a>
+			</div>
+		</li>
+		<li> <a href="landingPage.html">Home</a></li>
+		<li style="float: left"><a class="active" href="landingPage.html">ECHO</a></li>
+	</ul>
+	
+	<br><br><br><br><br>
+	<div class="grid-container">
+		<div class="grid-container2">
+			<h1>Account</h1>
+			<div class="grid-item1">
+				<h2>Username: <br>
+					Email: <br>
+					Password: <br><br>
+					High score:</h2>
+			</div>
+		</div>	
+		<div class="grid-item2">
+				<img src="octopus2.png" alt="Purple octopus"
+					style="width: 400px; height: 400px;">
+			</div>
+	</div>
+</body>
+</html>
